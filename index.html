@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.pable {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    border: 5px solid red;
+    height: 250px;
+    width: 80%;
+    margin-left: 10%;
+}
+.button {
+    font-size: 21px;
+    background: transparent;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 44%;
+}
+.button:hover {
+    background-color: red;
+    transition-duration: 1s;
+}
+    </style>
+</head>
+<body>
+    <h1 class="pable">Muft Ka Gyaan </h1>
+<div class="container">
+   <div id="qouterens"></div>
+</div>
+<button class="button" onclick={randoom()}>Naya Gyan</button>
+</body>
+<script>
+    const button = document.querySelector(".button");
+    const spaner = document.getElementById("qouterens");
+ const quotes = ["If you are going through hell, keep going.-Sahil","If you build it, they will come.-aksh","If you want something said, ask a man; if you want something done, ask a woman.-margerita pizza"];
+ function randoom() {
+   const index = Math.floor(Math.random()*3);
+console.log(index);
+spaner.textContent = quotes[index]
+ }
+</script>
+</html>
